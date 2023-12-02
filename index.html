@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Wellington Suero">
+        <meta name="description" content="PresTyper - Typing game">
+        <meta name="keywords" content="web developer, web, developer, front-end,
+            html, css, javascript, typing, game, objects, class">
+
+        <title>PressTyper - Precision Typing Game</title>
+
+        <!-- Stylesheets -->
+        <link rel="shortcut icon" href="./assets/img/favicon.png?=2" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/style/index.css" media="all">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap">
+        <script src="./assets/script/app.js" type="module"></script>
+    </head>
+    <body>
+        <main>
+            <div class="container flex">
+                <div class="game-container flex">
+                    <h1 class="game-name">PressTyper</h1>
+                    <div class="info-container">
+                        <p class="score">Score: <span class="score-value">0</span></p>
+                        <div class="timer">Time left: <span class="timer-value">99</span></div>
+                    </div>
+                    <p class="word-display">Start typing...</p>
+                    <input type="text" class="user-input" placeholder="Type the word">
+                    <button class="start-button" >Start Game</button>
+                    <button class="restart-button hidden" >Restart Game</button>
+                </div>
+
+                <div class="game-over-modal modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <p class="modal-title">Game Over</p>
+                        <p class="game-over-message"></p>
+                        <button class="restart-button restart-modal" >Restart Game</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

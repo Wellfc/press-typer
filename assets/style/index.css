@@ -1,0 +1,137 @@
+@import "./reset.css";
+
+body {
+    font-family: 'Playfair Display SC', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #2E8B57);
+    border: 5px solid #8B4513;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-container {
+    flex-direction: column;  
+    width: 50%;
+    height: 50%;
+}
+
+.game-name {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 4rem;
+    color: rgb(153, 50, 204);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-container {
+    font-family: 'Press Start 2P', sans-serif;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.score {
+    
+    color: rgb(3, 3, 88);
+}
+
+.timer {
+    width: 210px;
+    color: rgb(160, 20, 20);
+}
+
+.word-display {
+    font-size: 4rem;
+    color: rgb(101, 50, 204);
+    margin-bottom: 20px;
+}
+
+.user-input {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.start-button {
+    font-size: 1rem;
+    margin-top: 73px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-over-message {
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #c40808;
+    margin-top: 20px;
+    white-space: pre-line;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #c40808;
+    margin-bottom: 10px;
+}
+
+.modal-content {
+    position: relative;
+    background: rgb(40, 228, 125);
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 23px;
+    font-size: 2.5rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.restart-button {
+    font-size: 1rem;
+    margin-top: 73px;
+    padding: 10px;
+    background-color: #e8582c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
