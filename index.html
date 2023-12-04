@@ -17,7 +17,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <script src="./assets/script/app.js" type="module"></script>
     </head>
     <body>
@@ -26,13 +28,13 @@
                 <div class="game-container flex">
                     <h1 class="game-name">PressTyper</h1>
                     <div class="info-container">
-                        <p class="score">Score: <span class="score-value">0</span></p>
-                        <div class="timer">Time left: <span class="timer-value">99</span></div>
+                        <p class="score">Score <span class="score-value">0</span></p>
+                        <div class="timer"><i class="far fa-clock"></i> <span class="timer-value">99</span></div>
                     </div>
-                    <p class="word-display">Start typing...</p>
-                    <input type="text" class="user-input" placeholder="Type the word">
-                    <button class="start-button" >Start Game</button>
-                    <button class="restart-button hidden" >Restart Game</button>
+                    <p class="word-display blinking">Press Start to play</p>
+                    <input type="text" class="user-input" >
+                    <button class="start-button" >Start</button>
+                    <button class="restart-button hidden" >Restart</button>
                 </div>
 
                 <div class="game-over-modal modal">
@@ -40,7 +42,7 @@
                         <span class="close-modal">&times;</span>
                         <p class="modal-title">Game Over</p>
                         <p class="game-over-message"></p>
-                        <button class="restart-button restart-modal" >Restart Game</button>
+                        <button class="restart-button restart-modal" >Restart</button>
                     </div>
                 </div>
             </div>

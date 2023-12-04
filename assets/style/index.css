@@ -1,7 +1,8 @@
 @import "./reset.css";
 
 body {
-    font-family: 'Playfair Display SC', sans-serif;
+    /* font-family: 'Playfair Display SC', sans-serif; */
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -24,19 +25,19 @@ body {
 .game-container {
     flex-direction: column;  
     width: 50%;
-    height: 50%;
+    height: 60%;
 }
 
 .game-name {
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgb(153, 50, 204);
     margin-bottom: 20px;
     text-align: center;
 }
 
 .info-container {
-    font-family: 'Press Start 2P', sans-serif;
+    /* font-family: 'Press Start 2P', sans-serif; */
     display: flex;
     width: 80%;
     justify-content: space-between;
@@ -51,12 +52,23 @@ body {
 }
 
 .timer {
-    width: 210px;
+    display: flex;
+    width: 70px;
     color: rgb(160, 20, 20);
 }
 
+.fa-clock {
+    padding-top: 2px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.timer-value {
+    padding-top: 2px;
+}
+
 .word-display {
-    font-size: 4rem;
+    font-size: 2rem;
     color: rgb(101, 50, 204);
     margin-bottom: 20px;
 }
@@ -65,12 +77,14 @@ body {
     font-size: 1rem;
     padding: 10px;
     margin-bottom: 20px;
+    text-align: center;
+    pointer-events: none;
 }
 
 .start-button {
     font-size: 1rem;
     margin-top: 73px;
-    padding: 10px;
+    padding: 10px 30px;
     background-color: #4caf50;
     color: #fff;
     border: none;
@@ -128,10 +142,20 @@ body {
 .restart-button {
     font-size: 1rem;
     margin-top: 73px;
-    padding: 10px;
+    padding: 10px 21.5px;
     background-color: #e8582c;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1.5s infinite;
 }
