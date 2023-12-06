@@ -38,7 +38,7 @@ function resetGame() {
   userInput.value = "";
   userInput.disabled = true;
   wordDisplay.textContent = "Press Start to play";
-  wordDisplay.style.fontSize = "2rem";
+  // wordDisplay.style.fontSize = "3rem";
   userInput.placeholder = "";
   backgroundMusic.currentTime = 0;
   backgroundMusic.pause();
@@ -46,7 +46,7 @@ function resetGame() {
 
 // Start the timer
 function startTimer() {
-  timerValue = 10; // Change it for testing
+  timerValue = 99; // Change it for testing
   timerValueElement.textContent = timerValue;
   timerInterval = setInterval(function () {
     timerValue--;
@@ -68,7 +68,7 @@ function startGame() {
   startButton.classList.add("hidden");
   restartButton.classList.remove("hidden");
   wordDisplay.classList.remove("blinking");
-  wordDisplay.style.fontSize = "4rem";
+  // wordDisplay.style.fontSize = "4rem";
   userInput.placeholder = "Type the word here";
 
   playerScore = new Score();

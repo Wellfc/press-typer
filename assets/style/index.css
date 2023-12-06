@@ -68,7 +68,7 @@ body {
 }
 
 .word-display {
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(101, 50, 204);
     margin-bottom: 20px;
 }
@@ -96,7 +96,7 @@ body {
     height: 2rem;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #c40808;
+    color: #020202;
     margin-top: 20px;
     white-space: pre-line;
 }
@@ -109,6 +109,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     justify-content: center;
     align-items: center;
 }
@@ -116,13 +117,13 @@ body {
 .modal-title {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #c40808;
+    color: rgb(153, 50, 204);
     margin-bottom: 10px;
 }
 
 .modal-content {
     position: relative;
-    background: rgb(40, 228, 125);
+    background: #fff;
     padding: 50px;
     text-align: center;
     border-radius: 5px;
@@ -133,7 +134,7 @@ body {
     top: 0;
     right: 23px;
     font-size: 2.5rem;
-    color: #fff;
+    color: #020202;
     background: transparent;
     border: none;
     cursor: pointer;
