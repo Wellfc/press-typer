@@ -37,14 +37,16 @@ function resetGame() {
   modal.style.display = "none";
   userInput.value = "";
   userInput.disabled = true;
-  wordDisplay.textContent = "Start typing...";
+  wordDisplay.textContent = "Press Start to play";
+  // wordDisplay.style.fontSize = "3rem";
+  userInput.placeholder = "";
   backgroundMusic.currentTime = 0;
   backgroundMusic.pause();
 }
 
 // Start the timer
 function startTimer() {
-  timerValue = 99; // Change it for testing
+  timerValue = 10; // Change it for testing
   timerValueElement.textContent = timerValue;
   timerInterval = setInterval(function () {
     timerValue--;
@@ -65,6 +67,9 @@ function startGame() {
 
   startButton.classList.add("hidden");
   restartButton.classList.remove("hidden");
+  wordDisplay.classList.remove("blinking");
+  // wordDisplay.style.fontSize = "4rem";
+  userInput.placeholder = "Type the word here";
 
   playerScore = new Score();
 
@@ -76,26 +81,26 @@ function startGame() {
 
   userInput.value = "";
   userInput.focus();
-
-  // Listen for input events
-  onEvent(userInput, 'input', function () {
-    if (userInput.value.trim().toLowerCase() === currentWord) {
-      playerScore.updateScore();
-      scoreValue.textContent = playerScore.hits;
-
-      if (playerScore.isMaxScore(words.length)) {
-        clearInterval(timerInterval);
-        endGame();
-      } else {
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-        const nextWord = words[currentWordIndex];
-        currentWord = nextWord;
-        wordDisplay.textContent = nextWord;
-        userInput.value = "";
-      }
-    }
-  });
 }
+
+// Listen for input events
+onEvent(userInput, 'input', function () {
+  if (userInput.value.trim().toLowerCase() === currentWord) {
+    playerScore.updateScore();
+    scoreValue.textContent = playerScore.hits;
+
+    if (playerScore.isMaxScore(words.length)) {
+      clearInterval(timerInterval);
+      endGame();
+    } else {
+      currentWordIndex = (currentWordIndex + 1) % words.length;
+      const nextWord = words[currentWordIndex];
+      currentWord = nextWord;
+      wordDisplay.textContent = nextWord;
+      userInput.value = "";
+    }
+  }
+});
 
 // End the game
 function endGame() {
@@ -106,6 +111,7 @@ function endGame() {
 
   startButton.classList.remove("hidden");
   restartButton.classList.add("hidden");
+  wordDisplay.classList.add("blinking");
 
   // Show the modal
   modal.style.display = "flex";
