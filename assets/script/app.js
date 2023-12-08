@@ -46,7 +46,7 @@ function resetGame() {
 
 // Start the timer
 function startTimer() {
-  timerValue = 99; // Change it for testing
+  timerValue = 10; // Change it for testing
   timerValueElement.textContent = timerValue;
   timerInterval = setInterval(function () {
     timerValue--;
@@ -81,26 +81,26 @@ function startGame() {
 
   userInput.value = "";
   userInput.focus();
-
-  // Listen for input events
-  onEvent(userInput, 'input', function () {
-    if (userInput.value.trim().toLowerCase() === currentWord) {
-      playerScore.updateScore();
-      scoreValue.textContent = playerScore.hits;
-
-      if (playerScore.isMaxScore(words.length)) {
-        clearInterval(timerInterval);
-        endGame();
-      } else {
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-        const nextWord = words[currentWordIndex];
-        currentWord = nextWord;
-        wordDisplay.textContent = nextWord;
-        userInput.value = "";
-      }
-    }
-  });
 }
+
+// Listen for input events
+onEvent(userInput, 'input', function () {
+  if (userInput.value.trim().toLowerCase() === currentWord) {
+    playerScore.updateScore();
+    scoreValue.textContent = playerScore.hits;
+
+    if (playerScore.isMaxScore(words.length)) {
+      clearInterval(timerInterval);
+      endGame();
+    } else {
+      currentWordIndex = (currentWordIndex + 1) % words.length;
+      const nextWord = words[currentWordIndex];
+      currentWord = nextWord;
+      wordDisplay.textContent = nextWord;
+      userInput.value = "";
+    }
+  }
+});
 
 // End the game
 function endGame() {
