@@ -22,7 +22,7 @@ body {
 
 .game-container {
     flex-direction: column;
-    padding: 20px;
+    padding: 30px 20px;
     background-image: linear-gradient(
                         100deg, rgb(255 255 255 / 0.08),
                         rgb(255 255 255 / 0.15), 
@@ -187,4 +187,56 @@ body {
         font-size: 1.2rem;
         padding: 10px 0;
     }
+}
+
+.scoreboard-container {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 310px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+}
+
+.scoreboard-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e8582c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.scoreboard {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.scoreboard h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.ranking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ranking-list li {
+    margin-bottom: 5px;
+    color: rgb(118 136 255);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
 }
